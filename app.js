@@ -31,7 +31,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 mongoose
-  .connect(process.env.MONGOOSE_DB_URL)
+  .connect(process.env.DATABASE_URL)
   .then((res) => console.log("connected to db"))
   .catch((err) => console.log(err));
 
@@ -47,7 +47,7 @@ const userSchema = new mongoose.Schema({
 userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findOrCreate);
 
-const User = new mongoose.model("User", userSchema);
+const User = new mongoose.model("User", userSchema, "users");
 
 passport.use(User.createStrategy());
 

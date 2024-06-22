@@ -1,5 +1,3 @@
-![Secrets-oauth homepage](https://i.ibb.co/g3LKy6c/secrets-oauth.png)
-
 # Secrets-oauth-test
 Submit your secrets! Complete with Facebook and Google Oauth!
 Created with EJS, Node, CSS, JS, Mongoose, and Passport.
